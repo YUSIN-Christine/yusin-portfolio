@@ -1,0 +1,23 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* From style_1 of root node 6:2 */
+  color: #212121; /* Default text color */
+}
+
+.page-wrapper {
+  max-width: 1440px; /* From root node 6:2 width */
+  margin: 0 auto;
+  overflow: hidden; /* From style_1 of root node 6:2 */
+}
+
+.section-title-text { /* Common style for section titles like "服務項目｜Services" */
+  color: #212121;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 52px;
+  margin: 0;
+  text-align: left; /* As per style_6, parent container will center this block */
+}
