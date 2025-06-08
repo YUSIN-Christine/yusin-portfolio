@@ -9,15 +9,32 @@ body {
 .page-wrapper {
   max-width: 1440px; /* From root node 6:2 width */
   margin: 0 auto;
+  background-color: #ffffff; /* style_1 for index node 6:2 */
   overflow: hidden; /* From style_1 of root node 6:2 */
 }
 
-.section-title-text { /* Common style for section titles like "服務項目｜Services" */
+.section-title {
   color: #212121;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 900;
   font-size: 36px;
   line-height: 52px;
-  margin: 0;
-  text-align: left; /* As per style_6, parent container will center this block */
+  text-align: center;
+  margin-bottom: 50px; /* Approximate spacing */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* Common content width, e.g. navbar-inner */
+  margin: 0 auto;
+  padding: 0 20px; /* Responsive padding */
+}
+
+/* Responsive typography and spacing can be added with media queries */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
 }
