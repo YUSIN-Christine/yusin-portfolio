@@ -221,10 +221,8 @@
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Responsive grid */
-  gap: 34px; /* row-gap column-gap (vertical 35px, horizontal 33px) */
-  justify-content: center;
-  width: 996px; /* 310*3 + 33*2 */
+  grid-template-columns: repeat(auto-fit, minmax(300px, max-content)); /* Responsive grid */
+  gap: 34px; /* Approximate from Figma (33-35px) */
 
 }
 
