@@ -141,11 +141,13 @@
   padding: 50px 0; /* style_4 */
 }
 
-.service-cards-grid { /* Layout for 425:560 all-services */
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 475px);
+  grid-template-columns: repeat(2, 1fr); /* Responsive grid */
   gap: 40px; /* Approximate from Figma (41-42px) */
-  justify-content: center;
+  justify-content: center; /* Center items if they don't fill the row */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service-item {
@@ -217,12 +219,12 @@
   padding: 50px 0; /* style_7 */
 }
 
-.portfolio-grid { /* Layout for 561:639 works */
+.portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 310px);
+  grid-template-columns: repeat(3, 1fr); /* Responsive grid */
   gap: 34px; /* row-gap column-gap (vertical 35px, horizontal 33px) */
-  width: 996px; /* 310*3 + 33*2 */
   justify-content: center;
+  width: 996px; /* 310*3 + 33*2 */
 
 }
 
