@@ -1,16 +1,17 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generated Page</title>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Generated Page</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>YU-SIN Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css">
-  <style id="sections-styles">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="global.css" rel="stylesheet"/>
+<style id="sections-styles">
 /* CSS for section section:header */
 .site-header-section {
   background-color: #ffffff; /* style_32 */
@@ -137,311 +138,336 @@
 }
 
 /* CSS for section section:services */
-.services-section { /* Based on style_4 for 425:488 bg-services */
-  background-color: rgba(253, 237, 236, 0.5);
-  padding-top: 50px;
-  padding-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 54px; /* Calculated: 631 (cards_y) - (525 (title_y) + 52 (title_h)) */
+.services-section {
+  background-color: rgba(253, 237, 236, 0.5); /* style_4 */
+  padding: 50px 0; /* style_4 */
 }
-.services-title-frame { /* Based on style_5 for I425:488;178:255 */
-  /* This frame is centered by .services-section align-items:center */
-}
-/* .section-title-text is in global.css */
 
-.service-cards-grid { /* Layout for 425:560 all-services */
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 475px);
-  gap: 41px 42px; /* row-gap column-gap (vertical 41px, horizontal 42px) */
-  width: 992px; /* 475*2 + 42 */
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 960px;
+  margin: 0 auto; /* Responsive grid */
+  gap: 40px; /* Approximate from Figma (41-42px) */
+  justify-content: center; /* Center items if they don't fill the row */
 }
-.service-card { /* Based on style_14 for background rectangle (e.g. 425:489) */
-  background-color: #ffffff;
-  border-radius: 30px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-  width: 475px;
-  height: 240px;
-  padding: 30px; /* Calculated from content positions */
-  box-sizing: border-box;
+
+.service-item {
+  background-color: #ffffff; /* style_14 */
+  border-radius: 30px; /* style_14 */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25); /* style_14 */
+  padding: 30px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center; /* Vertically center content */
+  min-height: 240px; /* Height of S1-design rectangle 425:489 */
 }
-.service-card__title { /* Based on style_15 */
-  color: #212121;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-  margin: 0 0 9px 0; /* Margin bottom: 9.06px */
+
+.service-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Spacing between title, icon, description */
 }
-.service-card__icon {
-  /* Width/height set by SVG content, or can be fixed */
-  width: auto; /* Max widths/heights can be set if needed */
-  max-width: 110px; /* Based on largest icon */
-  max-height: 98px; /* Based on largest icon */
-  margin-bottom: 10px; /* Margin bottom: 10.36px */
+
+.service-title {
+  color: #212121; /* style_15 */
+  font-family: 'Noto Sans', sans-serif; /* style_15 */
+  font-weight: 700; /* style_15 */
+  font-size: 24px; /* style_15 */
+  line-height: 36px; /* style_15 */
+  margin: 0 0 10px 0;
 }
-.service-card__icon--design { /* style_16 for 425:501 */
-  transform: rotate(-4.98deg);
+
+.service-icon {
+  width: auto; /* Maintain aspect ratio */
+  height: 90px; /* Approximate common height */
+  margin-bottom: 10px;
 }
-.service-card__description { /* Based on style_17 */
-  color: #212121;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
+.design-icon-transform {
+  transform: rotate(-4.98deg); /* style_16 */
+}
+
+.service-description {
+  color: #212121; /* style_17 */
+  font-family: 'Noto Sans', sans-serif; /* style_17 */
+  font-weight: 400; /* style_17 */
+  font-size: 18px; /* style_17 */
+  line-height: 27px; /* style_17 */
   margin: 0;
 }
 
-/* Responsive adjustments for services */
-@media (max-width: 1024px) {
-  .service-cards-grid {
-    grid-template-columns: 1fr; /* Stack cards */
-    width: 100%;
-    max-width: 475px; /* Max width of a single card */
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+    gap: 20px;
   }
-  .service-card {
-    width: 100%;
+  .service-item {
+    padding: 20px;
   }
-}
-@media (max-width: 500px) {
-    .service-cards-grid {
-        max-width: 100%;
-    }
+  .service-title {
+    font-size: 20px;
+  }
+  .service-description {
+    font-size: 16px;
+  }
 }
 
 /* CSS for section section:portfolio */
-.portfolio-section { /* Based on style_7 for 425:564 bg-portfolio */
-  background-color: #ffffff;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 47px; /* Calculated: 1374 (cards_y) - (1275 (title_y) + 52 (title_h)) */
+.portfolio-section {
+  background-color: #ffffff; /* style_7 */
+  padding: 50px 0; /* style_7 */
 }
-.portfolio-title-frame { /* Based on style_5 for I425:564;178:255 */
-  /* Centered by .portfolio-section align-items:center */
-}
-/* .section-title-text is in global.css */
 
-.portfolio-cards-grid { /* Layout for 561:639 works */
+.portfolio-grid {
+  max-width: 1140px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
   display: grid;
-  grid-template-columns: repeat(3, 310px);
-  gap: 35px 33px; /* row-gap column-gap (vertical 35px, horizontal 33px) */
-  width: 996px; /* 310*3 + 33*2 */
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 960px;
+  margin: 0 auto; /* Responsive grid */
+  gap: 34px; /* Approximate from Figma (33-35px) */
 }
-.portfolio-card { /* Based on style_22 for 作品底 rectangle */
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
-  width: 310px;
-  height: 260px;
+
+.portfolio-item {
+  background-color: #ffffff; /* style_22 */
+  border-radius: 10px; /* style_22 */
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25); /* style_22 */
+  overflow: hidden; /* To contain rounded corners of image */
   display: flex;
   flex-direction: column;
 }
-.portfolio-card__image { /* Based on style_24, style_28 etc. for 作品 rectangle */
+
+.portfolio-image {
   width: 100%;
-  height: 207px; /* From 作品 rectangle height */
+  height: 207px; /* Height of image rectangle */
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
+  display: block;
 }
-.portfolio-card__image--placeholder { /* For style_30 */
-    background-color: #d9d9d9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #777;
-    font-size: 16px;
+.placeholder-image {
+  width: 100%;
+  height: 207px;
+  background-color: #d9d9d9; /* style_30 */
 }
-.portfolio-card__image--placeholder::after {
-    content: 'Image Placeholder';
-}
-.portfolio-card__info {
-  padding: 10px 14px; /* Approx based on text pos (x:373) vs card (x:359) and button pos */
+
+.portfolio-caption {
+  padding: 15px; /* Approximate spacing */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-grow: 1;
-}
-.portfolio-card__title { /* Based on style_23 */
-  color: #212121;
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
-  margin: 0;
-  text-align: left; /* Figma says center, but visual seems left aligned in its space */
-}
-.portfolio-card__more-button { /* Based on style_25 (group), style_26 (rect bg), style_27 (text) */
-  background-color: #b07bb3; /* style_26 */
-  color: #ffffff; /* style_27 */
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 27px;
-  text-decoration: none;
-  padding: 1px 12px; /* To make height 29px and center text */
-  border-radius: 999px; /* style_25 & style_26 */
-  height: 29px; /* From rect 455:739 */
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 72px; /* From rect 455:739 */
+  flex-grow: 1; /* Make caption take remaining space */
 }
 
-/* Responsive adjustments for portfolio */
-@media (max-width: 1024px) {
-  .portfolio-cards-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
+.portfolio-title-text {
+  color: #212121; /* style_23 */
+  font-family: 'Noto Sans', sans-serif; /* style_23 */
+  font-weight: 400; /* style_23 */
+  font-size: 18px; /* style_23 */
+  line-height: 27px; /* style_23 */
+}
+
+.more-button {
+  background-color: #b07bb3; /* style_26 */
+  color: #ffffff; /* style_27 */
+  font-family: 'Noto Sans', sans-serif; /* style_27 */
+  font-weight: 700; /* style_27 */
+  font-size: 18px; /* style_27, adjusted for better fit */
+  line-height: 1; /* Adjusted for button height */
+  padding: 6px 18px; /* Adjusted for visual balance */
+  border-radius: 999px; /* style_26 */
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  min-width: 72px; /* from figma */
+}
+.more-button:hover {
+  background-color: #936596; /* Darker shade for hover */
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+  max-width: 1140px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
   }
-  .portfolio-card {
-    width: 100%; /* Allow cards to take full width of grid column */
+  .portfolio-title-text {
+    font-size: 16px;
+  }
+  .more-button {
+    font-size: 14px;
+    padding: 4px 12px;
   }
 }
 
 /* CSS for section section:footer */
-.footer-outer-container { /* Based on style_2 for 425:615 Footer */
-  background-color: #664077;
-  padding: 12px 20px; /* Adjusted horizontal padding for responsiveness */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 50px; /* From Footer node height */
-  box-sizing: border-box;
+.site-footer-section {
+  background-color: #664077; /* style_2 */
+  padding: 12px 0; /* style_2 vertical padding */
 }
-.footer-inner-container {
-  /* The original padding on style_2 (463px left/right) defined a content width of 994px.
-     We'll let text center naturally. */
-  text-align: center;
+.site-footer .container {
+  /* style_2 padding-left/right 463px implies content width of 1920-2*463 = 994px */
+  /* Using standard container for consistency, text-align will center */
+  text-align: center; /* To center the text */
 }
-.copyright-text { /* Based on style_3 for I425:615;287:792 */
-  color: #ffffff;
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+
+.copyright-text {
+  color: #ffffff; /* style_3 */
+  font-family: 'Noto Sans', sans-serif; /* style_3 */
+  font-weight: 400; /* style_3 */
+  font-size: 16px; /* style_3 */
+  line-height: 24px; /* style_3 */
   margin: 0;
 }
-  </style>
-  <script src="global.js" defer></script>
+
+@media (max-width: 768px) {
+  .copyright-text {
+    font-size: 14px;
+  }
+}
+  
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+<script defer="" src="global.js"></script>
 </head>
 <body>
-<section id="section-header" class="header-outer-container">
-  <header class="header-inner-container">
-    <a href="#" class="logo-link">
-      <img src="images/96db1d426e7c7edfe7def2d10e4851d1fc452118.png" alt="Christine Logo" class="logo-image">
-    </a>
-    <nav class="main-navigation">
-      <ul class="nav-list">
-        <li class="nav-item"><a href="#about" class="nav-link">關於我</a></li>
-        <li class="nav-item"><a href="#section-services" class="nav-link">服務項目</a></li>
-        <li class="nav-item nav-item-dropdown">
-          <a href="#section-portfolio" class="nav-link">作品集</a>
-          <img src="images/I239_316_31_32_24_50.svg" alt="dropdown icon" class="dropdown-icon">
-        </li>
-        <li class="nav-item"><a href="#contact" class="nav-link">聯絡方式</a></li>
-      </ul>
-    </nav>
-  </header>
+<section class="site-header-section" id="section-header">
+<header class="site-header">
+<div class="header-container">
+<div class="logo">
+<a href="#">
+<img alt="Christine Logo" src="images/96db1d426e7c7edfe7def2d10e4851d1fc452118.png"/>
+</a>
+</div>
+<nav class="main-navigation">
+<ul>
+<li><a href="#section-about">關於我</a></li>
+<li><a href="#section-services">服務項目</a></li>
+<li>
+<a href="#section-portfolio">作品集
+              <img alt="dropdown icon" class="nav-arrow" src="images/I239_316_31_32_24_50.svg"/>
+</a>
+</li>
+<li><a href="#section-contact">聯絡方式</a></li>
+</ul>
+</nav>
+</div>
+</header>
 </section>
 <!--合併圖片-->
-<section id="section-hero" class="hero-section">
-  <div class="hero-image-container">
-    <img src="images/e6f7549e9bacd41ead959d76fe8c2647afec4d0c.png" alt="Hero background" class="hero-background-image">
-    <img src="images/468d4bcabff910a33c1e0cd2061db2755d0b1555.png" alt="Slogans" class="hero-slogan-image">
-  </div>
+<section class="hero-section" id="section-hero">
+<div class="hero-background">
+<img alt="Hero background image" class="hero-bg-image" src="images/994dd40cfae07e9b24fba619c8e85ea885a56e30.png"/>
+</div>
+<div class="hero-slogan">
+<img alt="設計是一種語言, 能傳遞訊息, 也能述說故事。期許自己透過設計, 與各種故事相遇。" class="hero-slogan-image" src="images/468d4bcabff910a33c1e0cd2061db2755d0b1555.png"/>
+</div>
 </section>
-<section id="section-services" class="services-section">
-  <div class="services-title-frame"> <!-- Corresponds to I425:488;178:255 -->
-    <h2 class="section-title-text">服務項目｜Services</h2> <!-- Corresponds to I425:488;156:231 -->
-  </div>
-  <div class="service-cards-grid"> <!-- Corresponds to 425:560 -->
-    <div class="service-card"> <!-- S1-design / 561:636 -->
-      <h3 class="service-card__title">平面設計</h3>
-      <img src="images/425_501.svg" alt="Design Icon" class="service-card__icon service-card__icon--design">
-      <p class="service-card__description">LOGO設計、廣告設計、數位行銷設計</p>
-    </div>
-    <div class="service-card"> <!-- S2-UIUX / 561:635 -->
-      <h3 class="service-card__title">UI/UX設計</h3>
-      <img src="images/425_504.svg" alt="UI/UX Icon" class="service-card__icon">
-      <p class="service-card__description">介面設計、互動設計、響應式網頁設計</p>
-    </div>
-    <div class="service-card"> <!-- S3-3D / 561:634 -->
-      <h3 class="service-card__title">3D創作</h3>
-      <img src="images/425_499.svg" alt="3D Icon" class="service-card__icon">
-      <p class="service-card__description">3D建模、材質貼圖設計、動畫製作</p>
-    </div>
-    <div class="service-card"> <!-- S4-motion / 561:633 -->
-      <h3 class="service-card__title">動態影像</h3>
-      <img src="images/425_497.svg" alt="Video Icon" class="service-card__icon">
-      <p class="service-card__description">2D動態圖像、視覺特效、影片剪輯</p>
-    </div>
-  </div>
+<section class="services-section" id="section-services">
+<div class="container">
+<h2 class="section-title">服務項目｜Services</h2>
+<div class="services-grid">
+<div class="service-item">
+<div class="service-item-content">
+<h3 class="service-title">平面設計</h3>
+<img alt="Design icon" class="service-icon design-icon-transform" src="images/425_501.svg"/>
+<p class="service-description">LOGO設計、廣告設計、數位行銷設計</p>
+</div>
+</div>
+<div class="service-item">
+<div class="service-item-content">
+<h3 class="service-title">UI/UX設計</h3>
+<img alt="UI/UX icon" class="service-icon" src="images/425_504.svg"/>
+<p class="service-description">介面設計、互動設計、響應式網頁設計</p>
+</div>
+</div>
+<div class="service-item">
+<div class="service-item-content">
+<h3 class="service-title">3D創作</h3>
+<img alt="3D icon" class="service-icon" src="images/425_499.svg"/>
+<p class="service-description">3D建模、材質貼圖設計、動畫製作</p>
+</div>
+</div>
+<div class="service-item">
+<div class="service-item-content">
+<h3 class="service-title">動態影像</h3>
+<img alt="Video icon" class="service-icon" src="images/425_497.svg"/>
+<p class="service-description">2D動態圖像、視覺特效、影片剪輯</p>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="section-portfolio" class="portfolio-section">
-  <div class="portfolio-title-frame"> <!-- Corresponds to I425:564;178:255 -->
-    <h2 class="section-title-text">精選作品集｜Portfolio</h2> <!-- Corresponds to I425:564;156:231 -->
-  </div>
-  <div class="portfolio-cards-grid"> <!-- Corresponds to 561:639 works -->
-    <div class="portfolio-card"> <!-- work-logo / 455:710 -->
-      <img src="images/fb8d6bb7da0fdddc7538e5199a08fca7027fa4e3.png" alt="LOGO設計" class="portfolio-card__image">
-      <div class="portfolio-card__info">
-        <h3 class="portfolio-card__title">LOGO設計</h3>
-        <a href="#" class="portfolio-card__more-button">more</a>
-      </div>
-    </div>
-    <div class="portfolio-card"> <!-- work-businesscard / 455:694 -->
-      <img src="images/36d46a296c07f54c40fa2658017a06ded9309914.png" alt="名片設計" class="portfolio-card__image">
-      <div class="portfolio-card__info">
-        <h3 class="portfolio-card__title">名片設計</h3>
-        <a href="#" class="portfolio-card__more-button">more</a>
-      </div>
-    </div>
-    <div class="portfolio-card"> <!-- work-3d / 455:706 -->
-      <img src="images/f2ccd222a4b82775a0533ca619e9c2c17b7ec9f5.png" alt="3D 作品" class="portfolio-card__image">
-      <div class="portfolio-card__info">
-        <h3 class="portfolio-card__title">3D 作品</h3>
-        <a href="#" class="portfolio-card__more-button">more</a>
-      </div>
-    </div>
-    <div class="portfolio-card"> <!-- work-uiux / 455:690 -->
-      <img src="" alt="UI/UX 設計" class="portfolio-card__image portfolio-card__image--placeholder"> <!-- style_30 placeholder -->
-      <div class="portfolio-card__info">
-        <h3 class="portfolio-card__title">UI/UX 設計</h3>
-        <a href="#" class="portfolio-card__more-button">more</a>
-      </div>
-    </div>
-    <div class="portfolio-card"> <!-- work-drawing / 455:702 -->
-      <img src="images/9d576fc6de4c081dabfb889072c39ca374dc66d1.png" alt="繪圖作品" class="portfolio-card__image">
-      <div class="portfolio-card__info">
-        <h3 class="portfolio-card__title">繪圖作品</h3>
-        <a href="#" class="portfolio-card__more-button">more</a>
-      </div>
-    </div>
-    <div class="portfolio-card"> <!-- work-motion / 455:698 -->
-      <img src="" alt="動態影像" class="portfolio-card__image portfolio-card__image--placeholder"> <!-- style_30 placeholder -->
-      <div class="portfolio-card__info">
-        <h3 class="portfolio-card__title">動態影像</h3>
-        <a href="#" class="portfolio-card__more-button">more</a>
-      </div>
-    </div>
-  </div>
+<section class="portfolio-section" id="section-portfolio">
+<div class="container">
+<h2 class="section-title">精選作品集｜Portfolio</h2>
+<div class="portfolio-grid">
+<div class="portfolio-item">
+<img alt="LOGO設計" class="portfolio-image" src="images/fb8d6bb7da0fdddc7538e5199a08fca7027fa4e3.png"/>
+<div class="portfolio-caption">
+<span class="portfolio-title-text">LOGO設計</span>
+<a class="more-button" href="#">more</a>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="名片設計" class="portfolio-image" src="images/36d46a296c07f54c40fa2658017a06ded9309914.png"/>
+<div class="portfolio-caption">
+<span class="portfolio-title-text">名片設計</span>
+<a class="more-button" href="#">more</a>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="3D 作品" class="portfolio-image" src="images/f2ccd222a4b82775a0533ca619e9c2c17b7ec9f5.png"/>
+<div class="portfolio-caption">
+<span class="portfolio-title-text">3D 作品</span>
+<a class="more-button" href="#">more</a>
+</div>
+</div>
+<div class="portfolio-item">
+<!-- Placeholder for image, as style_30 is a gray background -->
+<div class="portfolio-image placeholder-image"></div>
+<div class="portfolio-caption">
+<span class="portfolio-title-text">UI/UX 設計</span>
+<a class="more-button" href="#">more</a>
+</div>
+</div>
+<div class="portfolio-item">
+<img alt="繪圖作品" class="portfolio-image" src="images/9d576fc6de4c081dabfb889072c39ca374dc66d1.png"/>
+<div class="portfolio-caption">
+<span class="portfolio-title-text">繪圖作品</span>
+<a class="more-button" href="#">more</a>
+</div>
+</div>
+<div class="portfolio-item">
+<!-- Placeholder for image, as style_30 is a gray background -->
+<div class="portfolio-image placeholder-image"></div>
+<div class="portfolio-caption">
+<span class="portfolio-title-text">動態影像</span>
+<a class="more-button" href="#">more</a>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="section-footer" class="footer-outer-container">
-  <footer class="footer-inner-container">
-    <p class="copyright-text">© 2025 YU-SIN Portfolio All Rights Reserved.</p>
-  </footer>
+<section class="site-footer-section" id="section-footer">
+<footer class="site-footer">
+<div class="container">
+<p class="copyright-text">© 2025 YU-SIN Portfolio All Rights Reserved.</p>
+</div>
+</footer>
 </section>
 </body>
 </html>
