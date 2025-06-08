@@ -141,11 +141,11 @@
   padding: 50px 0; /* style_4 */
 }
 
-.services-grid {
+.service-cards-grid { /* Layout for 425:560 all-services */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-  gap: 40px; /* Approximate from Figma (41-42px) */
-  justify-content: center; /* Center items if they don't fill the row */
+  grid-template-columns: repeat(2, 475px);
+  gap: 41px 42px; /* row-gap column-gap (vertical 41px, horizontal 42px) */
+  width: 992px; /* 475*2 + 42 */
 }
 
 .service-item {
@@ -217,10 +217,12 @@
   padding: 50px 0; /* style_7 */
 }
 
-.portfolio-grid {
+.portfolio-grid { /* Layout for 561:639 works */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-  gap: 34px; /* Approximate from Figma (33-35px) */
+  grid-template-columns: repeat(3, 310px);
+  gap: 35px 33px; /* row-gap column-gap (vertical 35px, horizontal 33px) */
+  width: 996px; /* 310*3 + 33*2 */
+
 }
 
 .portfolio-item {
