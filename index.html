@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Generated Page</title>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YU-SIN Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="global.css" rel="stylesheet"/>
-<style id="sections-styles">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
 /* CSS for section section:header */
 .site-header-section {
   background-color: #ffffff; /* style_32 */
@@ -144,9 +143,7 @@
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 960px;
-  margin: 0 auto; /* Responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
   gap: 40px; /* Approximate from Figma (41-42px) */
   justify-content: center; /* Center items if they don't fill the row */
 }
@@ -221,13 +218,8 @@
 }
 
 .portfolio-grid {
-  max-width: 1140px;
-  margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 960px;
-  margin: 0 auto; /* Responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
   gap: 34px; /* Approximate from Figma (33-35px) */
 }
 
@@ -288,9 +280,6 @@
 
 @media (max-width: 768px) {
   .portfolio-grid {
-  max-width: 1140px;
-  margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
   }
@@ -328,145 +317,134 @@
     font-size: 14px;
   }
 }
-  
-@media (max-width: 1024px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
-<script defer="" src="global.js"></script>
+  </style>
+  <script src="global.js" defer></script>
 </head>
 <body>
-<section class="site-header-section" id="section-header">
-<header class="site-header">
-<div class="header-container">
-<div class="logo">
-<a href="#">
-<img alt="Christine Logo" src="images/96db1d426e7c7edfe7def2d10e4851d1fc452118.png"/>
-</a>
-</div>
-<nav class="main-navigation">
-<ul>
-<li><a href="#section-about">關於我</a></li>
-<li><a href="#section-services">服務項目</a></li>
-<li>
-<a href="#section-portfolio">作品集
-              <img alt="dropdown icon" class="nav-arrow" src="images/I239_316_31_32_24_50.svg"/>
-</a>
-</li>
-<li><a href="#section-contact">聯絡方式</a></li>
-</ul>
-</nav>
-</div>
-</header>
+<section id="section-header" class="site-header-section">
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="#">
+          <img src="images/96db1d426e7c7edfe7def2d10e4851d1fc452118.png" alt="Christine Logo">
+        </a>
+      </div>
+      <nav class="main-navigation">
+        <ul>
+          <li><a href="#section-about">關於我</a></li>
+          <li><a href="#section-services">服務項目</a></li>
+          <li>
+            <a href="#section-portfolio">作品集
+              <img src="images/I239_316_31_32_24_50.svg" alt="dropdown icon" class="nav-arrow">
+            </a>
+          </li>
+          <li><a href="#section-contact">聯絡方式</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 </section>
 <!--合併圖片-->
-<section class="hero-section" id="section-hero">
-<div class="hero-background">
-<img alt="Hero background image" class="hero-bg-image" src="images/994dd40cfae07e9b24fba619c8e85ea885a56e30.png"/>
-</div>
-<div class="hero-slogan">
-<img alt="設計是一種語言, 能傳遞訊息, 也能述說故事。期許自己透過設計, 與各種故事相遇。" class="hero-slogan-image" src="images/468d4bcabff910a33c1e0cd2061db2755d0b1555.png"/>
-</div>
+<section id="section-hero" class="hero-section">
+  <div class="hero-background">
+    <img src="images/994dd40cfae07e9b24fba619c8e85ea885a56e30.png" alt="Hero background image" class="hero-bg-image">
+  </div>
+  <div class="hero-slogan">
+    <img src="images/468d4bcabff910a33c1e0cd2061db2755d0b1555.png" alt="設計是一種語言, 能傳遞訊息, 也能述說故事。期許自己透過設計, 與各種故事相遇。" class="hero-slogan-image">
+  </div>
 </section>
-<section class="services-section" id="section-services">
-<div class="container">
-<h2 class="section-title">服務項目｜Services</h2>
-<div class="services-grid">
-<div class="service-item">
-<div class="service-item-content">
-<h3 class="service-title">平面設計</h3>
-<img alt="Design icon" class="service-icon design-icon-transform" src="images/425_501.svg"/>
-<p class="service-description">LOGO設計、廣告設計、數位行銷設計</p>
-</div>
-</div>
-<div class="service-item">
-<div class="service-item-content">
-<h3 class="service-title">UI/UX設計</h3>
-<img alt="UI/UX icon" class="service-icon" src="images/425_504.svg"/>
-<p class="service-description">介面設計、互動設計、響應式網頁設計</p>
-</div>
-</div>
-<div class="service-item">
-<div class="service-item-content">
-<h3 class="service-title">3D創作</h3>
-<img alt="3D icon" class="service-icon" src="images/425_499.svg"/>
-<p class="service-description">3D建模、材質貼圖設計、動畫製作</p>
-</div>
-</div>
-<div class="service-item">
-<div class="service-item-content">
-<h3 class="service-title">動態影像</h3>
-<img alt="Video icon" class="service-icon" src="images/425_497.svg"/>
-<p class="service-description">2D動態圖像、視覺特效、影片剪輯</p>
-</div>
-</div>
-</div>
-</div>
+<section id="section-services" class="services-section">
+  <div class="container">
+    <h2 class="section-title">服務項目｜Services</h2>
+    <div class="services-grid">
+      <div class="service-item">
+        <div class="service-item-content">
+          <h3 class="service-title">平面設計</h3>
+          <img src="images/425_501.svg" alt="Design icon" class="service-icon design-icon-transform">
+          <p class="service-description">LOGO設計、廣告設計、數位行銷設計</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-item-content">
+          <h3 class="service-title">UI/UX設計</h3>
+          <img src="images/425_504.svg" alt="UI/UX icon" class="service-icon">
+          <p class="service-description">介面設計、互動設計、響應式網頁設計</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-item-content">
+          <h3 class="service-title">3D創作</h3>
+          <img src="images/425_499.svg" alt="3D icon" class="service-icon">
+          <p class="service-description">3D建模、材質貼圖設計、動畫製作</p>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-item-content">
+          <h3 class="service-title">動態影像</h3>
+          <img src="images/425_497.svg" alt="Video icon" class="service-icon">
+          <p class="service-description">2D動態圖像、視覺特效、影片剪輯</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="portfolio-section" id="section-portfolio">
-<div class="container">
-<h2 class="section-title">精選作品集｜Portfolio</h2>
-<div class="portfolio-grid">
-<div class="portfolio-item">
-<img alt="LOGO設計" class="portfolio-image" src="images/fb8d6bb7da0fdddc7538e5199a08fca7027fa4e3.png"/>
-<div class="portfolio-caption">
-<span class="portfolio-title-text">LOGO設計</span>
-<a class="more-button" href="#">more</a>
-</div>
-</div>
-<div class="portfolio-item">
-<img alt="名片設計" class="portfolio-image" src="images/36d46a296c07f54c40fa2658017a06ded9309914.png"/>
-<div class="portfolio-caption">
-<span class="portfolio-title-text">名片設計</span>
-<a class="more-button" href="#">more</a>
-</div>
-</div>
-<div class="portfolio-item">
-<img alt="3D 作品" class="portfolio-image" src="images/f2ccd222a4b82775a0533ca619e9c2c17b7ec9f5.png"/>
-<div class="portfolio-caption">
-<span class="portfolio-title-text">3D 作品</span>
-<a class="more-button" href="#">more</a>
-</div>
-</div>
-<div class="portfolio-item">
-<!-- Placeholder for image, as style_30 is a gray background -->
-<div class="portfolio-image placeholder-image"></div>
-<div class="portfolio-caption">
-<span class="portfolio-title-text">UI/UX 設計</span>
-<a class="more-button" href="#">more</a>
-</div>
-</div>
-<div class="portfolio-item">
-<img alt="繪圖作品" class="portfolio-image" src="images/9d576fc6de4c081dabfb889072c39ca374dc66d1.png"/>
-<div class="portfolio-caption">
-<span class="portfolio-title-text">繪圖作品</span>
-<a class="more-button" href="#">more</a>
-</div>
-</div>
-<div class="portfolio-item">
-<!-- Placeholder for image, as style_30 is a gray background -->
-<div class="portfolio-image placeholder-image"></div>
-<div class="portfolio-caption">
-<span class="portfolio-title-text">動態影像</span>
-<a class="more-button" href="#">more</a>
-</div>
-</div>
-</div>
-</div>
+<section id="section-portfolio" class="portfolio-section">
+  <div class="container">
+    <h2 class="section-title">精選作品集｜Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="images/fb8d6bb7da0fdddc7538e5199a08fca7027fa4e3.png" alt="LOGO設計" class="portfolio-image">
+        <div class="portfolio-caption">
+          <span class="portfolio-title-text">LOGO設計</span>
+          <a href="#" class="more-button">more</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/36d46a296c07f54c40fa2658017a06ded9309914.png" alt="名片設計" class="portfolio-image">
+        <div class="portfolio-caption">
+          <span class="portfolio-title-text">名片設計</span>
+          <a href="#" class="more-button">more</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/f2ccd222a4b82775a0533ca619e9c2c17b7ec9f5.png" alt="3D 作品" class="portfolio-image">
+        <div class="portfolio-caption">
+          <span class="portfolio-title-text">3D 作品</span>
+          <a href="#" class="more-button">more</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <!-- Placeholder for image, as style_30 is a gray background -->
+        <div class="portfolio-image placeholder-image"></div>
+        <div class="portfolio-caption">
+          <span class="portfolio-title-text">UI/UX 設計</span>
+          <a href="#" class="more-button">more</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="images/9d576fc6de4c081dabfb889072c39ca374dc66d1.png" alt="繪圖作品" class="portfolio-image">
+        <div class="portfolio-caption">
+          <span class="portfolio-title-text">繪圖作品</span>
+          <a href="#" class="more-button">more</a>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <!-- Placeholder for image, as style_30 is a gray background -->
+        <div class="portfolio-image placeholder-image"></div>
+        <div class="portfolio-caption">
+          <span class="portfolio-title-text">動態影像</span>
+          <a href="#" class="more-button">more</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="site-footer-section" id="section-footer">
-<footer class="site-footer">
-<div class="container">
-<p class="copyright-text">© 2025 YU-SIN Portfolio All Rights Reserved.</p>
-</div>
-</footer>
+<section id="section-footer" class="site-footer-section">
+  <footer class="site-footer">
+    <div class="container">
+      <p class="copyright-text">&copy; 2025 YU-SIN Portfolio All Rights Reserved.</p>
+    </div>
+  </footer>
 </section>
 </body>
 </html>
