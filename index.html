@@ -1,120 +1,433 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="styleguide.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="index">
-      <div class="div">
-        <footer class="footer">
-          <p class="element-YU-SIN">© 2025&nbsp;&nbsp;YU-SIN Portfolio All Rights Reserved.</p>
-        </footer>
-        <div class="overlap">
-          <div class="bg-services">
-            <div class="div-wrapper"><div class="text-wrapper">服務項目｜Services</div></div>
-          </div>
-          <div class="all-services">
-            <div class="design">
-              <div class="view">
-                <div class="text-wrapper-2">平面設計</div>
-                <img class="design-icon" src="img/design-icon.svg" />
-                <div class="text-wrapper-3">LOGO設計、廣告設計、數位行銷設計</div>
-              </div>
-            </div>
-            <div class="UIUX">
-              <div class="UIUX-2">
-                <div class="text-wrapper-4">UI/UX設計</div>
-                <div class="frame"></div>
-                <div class="text-wrapper-5">介面設計、互動設計、響應式網頁設計</div>
-              </div>
-            </div>
-            <div class="s-d">
-              <div class="element">
-                <div class="text-wrapper-2">3D創作</div>
-                <img class="element-icon" src="img/3d-icon.svg" />
-                <div class="text-wrapper-6">3D建模、材質貼圖設計、動畫製作</div>
-              </div>
-            </div>
-            <div class="motion">
-              <div class="view-2">
-                <div class="text-wrapper-7">動態影像</div>
-                <img class="video-icon" src="img/video-icon.svg" />
-                <div class="text-wrapper-8">2D動態圖像、視覺特效、影片剪輯</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="overlap-group">
-          <div class="bg-portfolio">
-            <div class="div-wrapper"><div class="text-wrapper">精選作品集｜Portfolio</div></div>
-          </div>
-          <div class="works">
-            <div class="work-logo">
-              <div class="text-wrapper-9">LOGO設計</div>
-              <img class="image" src="img/image-4.png" />
-              <div class="more">
-                <div class="overlap-group-2"><div class="text-wrapper-10">more</div></div>
-              </div>
-            </div>
-            <div class="work-businesscard">
-              <div class="text-wrapper-11">名片設計</div>
-              <img class="image" src="img/image-2.png" />
-              <div class="more">
-                <div class="overlap-group-2"><div class="text-wrapper-10">more</div></div>
-              </div>
-            </div>
-            <div class="work">
-              <div class="text-wrapper-11">3D 作品</div>
-              <img class="image" src="img/image.png" />
-              <div class="more">
-                <div class="overlap-group-2"><div class="text-wrapper-10">more</div></div>
-              </div>
-            </div>
-            <div class="work-uiux">
-              <div class="text-wrapper-9">UI/UX 設計</div>
-              <div class="view-3"></div>
-              <div class="more">
-                <div class="overlap-group-2"><div class="text-wrapper-10">more</div></div>
-              </div>
-            </div>
-            <div class="work-drawing">
-              <div class="text-wrapper-11">繪圖作品</div>
-              <img class="image" src="img/image-3.png" />
-              <div class="more">
-                <div class="overlap-group-2"><div class="text-wrapper-10">more</div></div>
-              </div>
-            </div>
-            <div class="work-motion">
-              <div class="text-wrapper-11">動態影像</div>
-              <div class="view-3"></div>
-              <div class="more">
-                <div class="overlap-group-2"><div class="text-wrapper-10">more</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="hero"><img class="slogans" src="img/slogans.png" /></div>
-        <div class="home-navber">
-          <div class="navbar-inner">
-            <a href="index.html"
-              ><div class="christine"><img class="img" src="img/christine-02-1.png" /></div
-            ></a>
-            <div class="tab-group">
-              <div class="div-wrapper-2"><div class="text-wrapper-12">關於我</div></div>
-              <div class="div-wrapper-2"><div class="text-wrapper-12">服務項目</div></div>
-              <div class="web-portfolio">
-                <div class="text-wrapper-12">作品集</div>
-                <img class="chevron-down" src="img/chevron-down.svg" />
-              </div>
-              <div class="div-wrapper-2"><div class="text-wrapper-12">聯絡方式</div></div>
-            </div>
-          </div>
-        </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+/* CSS for section section:header */
+.header-outer-container { /* Based on style_32 for 239:316 HomeNavber */
+  background-color: #ffffff;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px; /* From style_32 */
+  display: flex;
+  justify-content: center;
+}
+.header-inner-container { /* Based on style_33 for I239:316;31:60 navbar-inner */
+  width: 1200px; /* From navbar-inner bounding box */
+  display: flex;
+  justify-content: space-between; /* Overriding gap:373px for better flex behavior */
+  align-items: center;
+  padding: 15px 0; /* Adjusted from 15px 95px, as width 1200px handles overall spacing */
+}
+.logo-link { /* Based on style_34 for I239:316;168:236 Christine (logo frame) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-image { /* Based on I239:316;164:245 Christine-02 1 */
+  width: 128px;
+  height: 46.55px;
+}
+.main-navigation { /* Based on style_36 for I239:316;31:54 Tab group */
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 35px; /* From style_36 */
+}
+.nav-item { /* Based on style_37 for Web-tab-* instances */
+  display: flex;
+  align-items: center;
+  gap: 2px; /* From style_37 */
+}
+.nav-link { /* Based on style_38 for text within tabs */
+  text-decoration: none;
+  color: #212121;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+}
+.dropdown-icon { /* Based on style_41 for I239:316;31:32;24:50 chevron-down */
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive adjustments for header */
+@media (max-width: 1200px) {
+  .header-inner-container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .header-inner-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+/* CSS for section section:hero */
+.hero-section { /* Based on 561:638 hero frame */
+  position: relative; /* For absolute positioning of children */
+  width: 100%; /* To span full viewport width */
+  height: 375px; /* From 561:638.height */
+  overflow: hidden; /* To contain images if they are larger */
+  background-color: #ccc; /* Fallback if images don't load */
+}
+.hero-image-container { /* This div is for the merged images */
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.hero-background-image { /* Based on 411:477 bg-picture */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%; /* Ensure it covers the area, may need adjustment based on actual image aspect ratio */
+  min-height: 100%;
+  object-fit: cover; /* To cover the 375px height */
+  z-index: 1;
+}
+.hero-slogan-image { /* Based on 425:478 Slogans */
+  position: absolute;
+  /* Original Figma: x: 352, y: 200. Hero frame: x: -103, y: 100.
+     Relative to hero frame: left: (352 - (-103)) = 455px; top: (200 - 100) = 100px.
+     These absolute pixel values might not be ideal for responsiveness.
+     Centering it might be better for smaller screens.
+  */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 724px; /* From 425:478.width */
+  height: 175px; /* From 425:478.height */
+  max-width: 90%; /* For responsiveness */
+  z-index: 2;
+}
+
+/* CSS for section section:services */
+.services-section { /* Based on style_4 for 425:488 bg-services */
+  background-color: rgba(253, 237, 236, 0.5);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 54px; /* Calculated: 631 (cards_y) - (525 (title_y) + 52 (title_h)) */
+}
+.services-title-frame { /* Based on style_5 for I425:488;178:255 */
+  /* This frame is centered by .services-section align-items:center */
+}
+/* .section-title-text is in global.css */
+
+.service-cards-grid { /* Layout for 425:560 all-services */
+  display: grid;
+  grid-template-columns: repeat(2, 475px);
+  gap: 41px 42px; /* row-gap column-gap (vertical 41px, horizontal 42px) */
+  width: 992px; /* 475*2 + 42 */
+}
+.service-card { /* Based on style_14 for background rectangle (e.g. 425:489) */
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  width: 475px;
+  height: 240px;
+  padding: 30px; /* Calculated from content positions */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.service-card__title { /* Based on style_15 */
+  color: #212121;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 0 0 9px 0; /* Margin bottom: 9.06px */
+}
+.service-card__icon {
+  /* Width/height set by SVG content, or can be fixed */
+  width: auto; /* Max widths/heights can be set if needed */
+  max-width: 110px; /* Based on largest icon */
+  max-height: 98px; /* Based on largest icon */
+  margin-bottom: 10px; /* Margin bottom: 10.36px */
+}
+.service-card__icon--design { /* style_16 for 425:501 */
+  transform: rotate(-4.98deg);
+}
+.service-card__description { /* Based on style_17 */
+  color: #212121;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+}
+
+/* Responsive adjustments for services */
+@media (max-width: 1024px) {
+  .service-cards-grid {
+    grid-template-columns: 1fr; /* Stack cards */
+    width: 100%;
+    max-width: 475px; /* Max width of a single card */
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  .service-card {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+    .service-cards-grid {
+        max-width: 100%;
+    }
+}
+
+/* CSS for section section:portfolio */
+.portfolio-section { /* Based on style_7 for 425:564 bg-portfolio */
+  background-color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 47px; /* Calculated: 1374 (cards_y) - (1275 (title_y) + 52 (title_h)) */
+}
+.portfolio-title-frame { /* Based on style_5 for I425:564;178:255 */
+  /* Centered by .portfolio-section align-items:center */
+}
+/* .section-title-text is in global.css */
+
+.portfolio-cards-grid { /* Layout for 561:639 works */
+  display: grid;
+  grid-template-columns: repeat(3, 310px);
+  gap: 35px 33px; /* row-gap column-gap (vertical 35px, horizontal 33px) */
+  width: 996px; /* 310*3 + 33*2 */
+}
+.portfolio-card { /* Based on style_22 for 作品底 rectangle */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  width: 310px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+}
+.portfolio-card__image { /* Based on style_24, style_28 etc. for 作品 rectangle */
+  width: 100%;
+  height: 207px; /* From 作品 rectangle height */
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+.portfolio-card__image--placeholder { /* For style_30 */
+    background-color: #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 16px;
+}
+.portfolio-card__image--placeholder::after {
+    content: 'Image Placeholder';
+}
+.portfolio-card__info {
+  padding: 10px 14px; /* Approx based on text pos (x:373) vs card (x:359) and button pos */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+.portfolio-card__title { /* Based on style_23 */
+  color: #212121;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  text-align: left; /* Figma says center, but visual seems left aligned in its space */
+}
+.portfolio-card__more-button { /* Based on style_25 (group), style_26 (rect bg), style_27 (text) */
+  background-color: #b07bb3; /* style_26 */
+  color: #ffffff; /* style_27 */
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  text-decoration: none;
+  padding: 1px 12px; /* To make height 29px and center text */
+  border-radius: 999px; /* style_25 & style_26 */
+  height: 29px; /* From rect 455:739 */
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px; /* From rect 455:739 */
+}
+
+/* Responsive adjustments for portfolio */
+@media (max-width: 1024px) {
+  .portfolio-cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  .portfolio-card {
+    width: 100%; /* Allow cards to take full width of grid column */
+  }
+}
+
+/* CSS for section section:footer */
+.footer-outer-container { /* Based on style_2 for 425:615 Footer */
+  background-color: #664077;
+  padding: 12px 20px; /* Adjusted horizontal padding for responsiveness */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px; /* From Footer node height */
+  box-sizing: border-box;
+}
+.footer-inner-container {
+  /* The original padding on style_2 (463px left/right) defined a content width of 994px.
+     We'll let text center naturally. */
+  text-align: center;
+}
+.copyright-text { /* Based on style_3 for I425:615;287:792 */
+  color: #ffffff;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+}
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<section id="section-header" class="header-outer-container">
+  <header class="header-inner-container">
+    <a href="#" class="logo-link">
+      <img src="images/96db1d426e7c7edfe7def2d10e4851d1fc452118.png" alt="Christine Logo" class="logo-image">
+    </a>
+    <nav class="main-navigation">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#about" class="nav-link">關於我</a></li>
+        <li class="nav-item"><a href="#section-services" class="nav-link">服務項目</a></li>
+        <li class="nav-item nav-item-dropdown">
+          <a href="#section-portfolio" class="nav-link">作品集</a>
+          <img src="images/I239_316_31_32_24_50.svg" alt="dropdown icon" class="dropdown-icon">
+        </li>
+        <li class="nav-item"><a href="#contact" class="nav-link">聯絡方式</a></li>
+      </ul>
+    </nav>
+  </header>
+</section>
+<!--合併圖片-->
+<section id="section-hero" class="hero-section">
+  <div class="hero-image-container">
+    <img src="images/e6f7549e9bacd41ead959d76fe8c2647afec4d0c.png" alt="Hero background" class="hero-background-image">
+    <img src="images/468d4bcabff910a33c1e0cd2061db2755d0b1555.png" alt="Slogans" class="hero-slogan-image">
+  </div>
+</section>
+<section id="section-services" class="services-section">
+  <div class="services-title-frame"> <!-- Corresponds to I425:488;178:255 -->
+    <h2 class="section-title-text">服務項目｜Services</h2> <!-- Corresponds to I425:488;156:231 -->
+  </div>
+  <div class="service-cards-grid"> <!-- Corresponds to 425:560 -->
+    <div class="service-card"> <!-- S1-design / 561:636 -->
+      <h3 class="service-card__title">平面設計</h3>
+      <img src="images/425_501.svg" alt="Design Icon" class="service-card__icon service-card__icon--design">
+      <p class="service-card__description">LOGO設計、廣告設計、數位行銷設計</p>
+    </div>
+    <div class="service-card"> <!-- S2-UIUX / 561:635 -->
+      <h3 class="service-card__title">UI/UX設計</h3>
+      <img src="images/425_504.svg" alt="UI/UX Icon" class="service-card__icon">
+      <p class="service-card__description">介面設計、互動設計、響應式網頁設計</p>
+    </div>
+    <div class="service-card"> <!-- S3-3D / 561:634 -->
+      <h3 class="service-card__title">3D創作</h3>
+      <img src="images/425_499.svg" alt="3D Icon" class="service-card__icon">
+      <p class="service-card__description">3D建模、材質貼圖設計、動畫製作</p>
+    </div>
+    <div class="service-card"> <!-- S4-motion / 561:633 -->
+      <h3 class="service-card__title">動態影像</h3>
+      <img src="images/425_497.svg" alt="Video Icon" class="service-card__icon">
+      <p class="service-card__description">2D動態圖像、視覺特效、影片剪輯</p>
+    </div>
+  </div>
+</section>
+<section id="section-portfolio" class="portfolio-section">
+  <div class="portfolio-title-frame"> <!-- Corresponds to I425:564;178:255 -->
+    <h2 class="section-title-text">精選作品集｜Portfolio</h2> <!-- Corresponds to I425:564;156:231 -->
+  </div>
+  <div class="portfolio-cards-grid"> <!-- Corresponds to 561:639 works -->
+    <div class="portfolio-card"> <!-- work-logo / 455:710 -->
+      <img src="images/fb8d6bb7da0fdddc7538e5199a08fca7027fa4e3.png" alt="LOGO設計" class="portfolio-card__image">
+      <div class="portfolio-card__info">
+        <h3 class="portfolio-card__title">LOGO設計</h3>
+        <a href="#" class="portfolio-card__more-button">more</a>
       </div>
     </div>
-  </body>
+    <div class="portfolio-card"> <!-- work-businesscard / 455:694 -->
+      <img src="images/36d46a296c07f54c40fa2658017a06ded9309914.png" alt="名片設計" class="portfolio-card__image">
+      <div class="portfolio-card__info">
+        <h3 class="portfolio-card__title">名片設計</h3>
+        <a href="#" class="portfolio-card__more-button">more</a>
+      </div>
+    </div>
+    <div class="portfolio-card"> <!-- work-3d / 455:706 -->
+      <img src="images/f2ccd222a4b82775a0533ca619e9c2c17b7ec9f5.png" alt="3D 作品" class="portfolio-card__image">
+      <div class="portfolio-card__info">
+        <h3 class="portfolio-card__title">3D 作品</h3>
+        <a href="#" class="portfolio-card__more-button">more</a>
+      </div>
+    </div>
+    <div class="portfolio-card"> <!-- work-uiux / 455:690 -->
+      <img src="" alt="UI/UX 設計" class="portfolio-card__image portfolio-card__image--placeholder"> <!-- style_30 placeholder -->
+      <div class="portfolio-card__info">
+        <h3 class="portfolio-card__title">UI/UX 設計</h3>
+        <a href="#" class="portfolio-card__more-button">more</a>
+      </div>
+    </div>
+    <div class="portfolio-card"> <!-- work-drawing / 455:702 -->
+      <img src="images/9d576fc6de4c081dabfb889072c39ca374dc66d1.png" alt="繪圖作品" class="portfolio-card__image">
+      <div class="portfolio-card__info">
+        <h3 class="portfolio-card__title">繪圖作品</h3>
+        <a href="#" class="portfolio-card__more-button">more</a>
+      </div>
+    </div>
+    <div class="portfolio-card"> <!-- work-motion / 455:698 -->
+      <img src="" alt="動態影像" class="portfolio-card__image portfolio-card__image--placeholder"> <!-- style_30 placeholder -->
+      <div class="portfolio-card__info">
+        <h3 class="portfolio-card__title">動態影像</h3>
+        <a href="#" class="portfolio-card__more-button">more</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section-footer" class="footer-outer-container">
+  <footer class="footer-inner-container">
+    <p class="copyright-text">© 2025 YU-SIN Portfolio All Rights Reserved.</p>
+  </footer>
+</section>
+</body>
 </html>
